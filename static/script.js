@@ -5,7 +5,7 @@ const popupText = document.getElementById("popupText");
 const closePopup = document.getElementById("closePopup");
 const changeColorButton = document.getElementById("changeColorButton");
 
-const colors = ["white", "lightblue", "lightgreen", "lightcoral"];
+const colors = ["white", "black", "red"];
 let currentColorIndex = 0;
 
 // Mostrar ventana emergente al presionar Enter
@@ -31,5 +31,15 @@ closePopup.addEventListener("click", function() {
 // Cambiar color de la ventana emergente
 changeColorButton.addEventListener("click", function() {
     currentColorIndex = (currentColorIndex + 1) % colors.length;
-    document.querySelector(".popup-content").style.backgroundColor = colors[currentColorIndex];
+    let popupContent = document.querySelector(".popup-content");
+    
+    popupContent.style.backgroundColor = colors[currentColorIndex];
+
+    // Cambiar el color del texto dependiendo del fondo
+    if (colors[currentColorIndex] === "black") {
+        popupText.style.color = "white";  // Texto en blanco si el fondo es negro
+    } else {
+        popupText.style.color = "black";  // Texto en negro en otros casos
+    }
 });
+
