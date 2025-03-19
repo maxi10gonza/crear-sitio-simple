@@ -1,5 +1,3 @@
-Proyecto: Crear un Sitio Web Simple con Flask
-
 Este proyecto es una aplicación web sencilla creada con Flask en Python. Permite ingresar texto en una caja de entrada, mostrarlo en una ventana emergente y cambiar el color del fondo mediante un botón.
 
 Explicación de los Archivos
